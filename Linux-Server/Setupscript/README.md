@@ -1,1 +1,2 @@
-# Test README
+# Setupscript
+An simple Script for Setting up an Linux Server with an Update, FTP and SSH-Server
