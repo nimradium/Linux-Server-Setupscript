@@ -1,4 +1,4 @@
 # Servers
 Some Scripts etc. for my private servers.
-# Linux Server
+### Linux Server
 Scripts for Linux Server
