@@ -18,14 +18,10 @@ function checkInstall {
 }
 
 #Root Passwort
-greenMessage "Passwort für Root setzen"
+greenMessage "Passwort fÃ¼r Root setzen"
 passwd root
 
-#als root einloggen
-greenMessage "Loggen sie sich als Admin ein"
-su
-
-#Update durchführen
+#Update durchfÃ¼hren
 greenMessage "Update wird installiert"
 apt update
 apt --yes upgrade
