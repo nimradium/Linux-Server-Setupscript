@@ -9,6 +9,12 @@ function okAndSleep {
     sleep 1
 }
 
+#errorAndContiue
+function errorAndContinue {
+    redMessage "Invalid option."
+    continue
+}
+
 #CheckInstall
 function checkInstall {
     if [ "`dpkg-query -s $1 2>/dev/null`" == "" ]; then
