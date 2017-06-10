@@ -18,20 +18,20 @@ function checkInstall {
 }
 
 #Root Passwort
-greenMessage "Passwort für Root setzen"
+greenMessage "Bitte setzten sie ein Passwort für den Root Account."
 passwd root
 
 #Update durchführen
-greenMessage "Update wird installiert"
+greenMessage "Updates werden installiert."
 apt update
 apt --yes upgrade
 
 #FTP-Server installation
-greenMessage "FTP-Server installieren"
+greenMessage "Der FTP-Server wird installieren."
 apt-get install --yes vsftpd
 
 #SSH-Server installieren
-greenMessage "Soll SSH Server installiert werden"
+greenMessage "Soll ein SSH-Server installiert werden?"
 
 OPTIONS=("Ja" "Nein")
 select SSH in "${OPTIONS[@]}"; do
@@ -42,6 +42,6 @@ select SSH in "${OPTIONS[@]}"; do
 done
 		
 if [ "$SSH" == "Ja" ]; then
-        greenMessage "SSH wird installiert"
+        greenMessage "Der SSH-Server wird installiert."
         apt-get install --yes openssh-server
 fi
